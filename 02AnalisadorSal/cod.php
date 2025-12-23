@@ -21,39 +21,33 @@
     # Variável de conversão de moeda para real
     $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
 
-    # Calculo da porcentagem de descontos
-    $desc_Inss = ($bruto * 10) / 100;
-    $desc_vt = ($bruto * 6) / 100;
+    # Condicionais da porcentagem de descontos
+    if ($bruto <= 0) {
+        echo "<h1>Salário inválido.<h1>";
+        exit;
+    } else if ($bruto <= 1500) {
+        $inss = ($bruto * 8) / 100;
+    } else if ($bruto >= 1501 && $bruto <= 3000) {
+        $inss = ($bruto * 10) / 100;
+    } else {
+        $inss = ($bruto * 12) / 100;
+    }
 
-    # Total de descontos
-    $total_desc = $desc_Inss + $desc_vt;
+    # Condicional de Vale transporte
+    if ($bruto > 2000) {
+        $vt = ($bruto * 6) / 100;
+    } else {
+        $vt = 0;
+    }
 
-    # Salário liquido final
+    # Calculo de descontos
+    $total_desc = $inss + $vt;
+
+    # Liquido final
     $liquido = $bruto - $total_desc;
 
-    # Condicionais de desconto de INSS
-    if ($bruto <= 1500) {
-        $desc_Inss = ($bruto * 6) / 100;
-        $total_desc = $desc_Inss + $desc_vt;
-        $liquido = $bruto - $total_desc;
-    } else if ($bruto >= 1501 && $bruto < 3000) {
-        $desc_Inss = ($bruto * 10) / 100;
-        $total_desc = $desc_Inss + $desc_vt;
-        $liquido = $bruto - $total_desc;
-    } else {
-        $desc_Inss = ($bruto * 12) / 100;
-        $total_desc = $desc_Inss + $desc_vt;
-        $liquido = $bruto - $total_desc;
-    }
 
-    # Condicionais de desconto de VT
-    if ($bruto >= 2000) {
-        $desc_vt = $desc_vt;
-    } else {
-        $desc_vt = 0;
-        $liquido = $bruto - $desc_Inss;
-        $total_desc = $desc_Inss - $desc_vt;
-    }
+
     ?>
     <header>
         <h1>Salary Analyzer | By ThDev <sup><small>tech.</small></sup></h1>
@@ -64,8 +58,8 @@
             <form>
                 <ul>
                     <li>Salário bruto: <strong> <?= numfmt_format_currency($padrao, $bruto, "BRL") ?></strong></li>
-                    <li>Desconto INSS:<strong><?= numfmt_format_currency($padrao, $desc_Inss, "BRL") ?></strong></li>
-                    <li>Vale transporte: <strong> <?= numfmt_format_currency($padrao, $desc_vt, "BRL") ?></strong></li>
+                    <li>Desconto INSS:<strong><?= numfmt_format_currency($padrao, $inss, "BRL") ?></strong></li>
+                    <li>Vale transporte: <strong> <?= numfmt_format_currency($padrao, $vt, "BRL") ?></strong></li>
                     <li>Total de descontos: <strong> <?= numfmt_format_currency($padrao, $total_desc, "BRL") ?></strong>
                     </li>
                     <li>Salário liquido: <strong> <?= numfmt_format_currency($padrao, $liquido, "BRL") ?></strong></li>
