@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Analisador de IRRF</title>
+</head>
+
+<body>
+    <header>
+        <h1>ParcBank | By ThDev <sup><small>tech.</small></sup></h1>
+    </header>
+    <main>
+        <section>
+            <h2>Calculo de Desconto de IRRF</h2>
+            <form action="cod.php" method="get">
+                <label for="sal">Salário bruto (R$)</label>
+                <input type="number" name="sal" min="1412" step="0.01" placeholder="Ex: 1412" required>
+                <input class="btn" type="submit" value="Verificar">
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
