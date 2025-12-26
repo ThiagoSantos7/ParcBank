@@ -9,13 +9,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>ThFlix - ThDev</title>
 </head>
 
 <body>
     <header>
-        <h1>ThFlix - By ThDev <sup><small><img src="./img/icons8-pipoca-64.png" alt="pipoca"></small></sup></h1>
+        <h1>ThFlix - <span>By ThDev</span> <sup><small><img src="./img/icons8-pipoca-64.png" alt="pipoca"></small></sup>
+        </h1>
     </header>
     <main>
         <section>
