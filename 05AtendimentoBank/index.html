@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -12,13 +13,15 @@
 </head>
 
 <body>
+
     <header>
-        <h1>ThBank | By ThDev <sup><small>tech</small></sup></h1>
+        <h1>ThBank | <span>By ThDev <sup><small>tech</small></sup></span></h1>
     </header>
+
     <main>
         <section>
             <h2>Seja bem vindo ao nosso atendimento!</h2>
-            <p>Selecione abaixo qual opção você deseja hoje :)</p>
+            <h4>Selecione abaixo qual opção você deseja hoje :)</h4>
             <form action="cod.php" method="get">
                 <label for="op">Opções de atendimento:</label>
                 <select name="op" id="idop">
@@ -28,10 +31,11 @@
                     <option value="3">Depositar dinheiro</option>
                     <option value="4">Encerrar atendimento</option>
                 </select>
-                <input type="submit" value="Acessar">
+                <input class="btn" type="submit" value="Acessar">
             </form>
         </section>
     </main>
+
 </body>
 
 </html>
