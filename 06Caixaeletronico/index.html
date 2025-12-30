@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Caixa Eletrônico - ThStore</title>
+</head>
+
+<body>
+    <header>
+        <h1>ThStore Co<sup><small>®</small></sup></h1>
+        <div class="logo">
+            <img src="./assets/thStoreLogo.png" alt="logo">
+        </div>
+    </header>
+
+    <main>
+        <fieldset>
+            <legend>Carrinho de Compras</legend>
+            <form class="form-one" action="cod.php" method="get">
+                <label for="produto">Valor da compra (R$)</label>
+                <input type="number" name="produto" placeholder="Ex: 200" step="0.01" min="1" required>
+                <label for="pag">Forma de pagamento (R$)</label>
+                <select name="pag" id="idpag">
+                    <option value="1">Pix</option>
+                    <option value="2">Boleto</option>
+                    <option value="3">Credito</option>
+                    <option value="4">Parcelado</option>
+                    <option value="5">Debito</option>
+                </select>
+                <label for="op">Escolha uma opção:</label>
+                <button class="btnM" name="op" value="1">Calcular desconto</button>
+                <button class="btnM" name="op" value="2">Calcular acréscimo</button>
+                <div class="buttons">
+                    <button class="btn" name="op" value="3">Resumo Compra</button>
+                    <button class="btn" id="red" name="op" value="4" class="cancel">Cancelar Operação</button>
+                </div>
+            </form>
+        </fieldset>
+    </main>
+</body>
+
+</html>

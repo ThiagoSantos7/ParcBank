@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, rgb(253, 243, 255), rgb(232, 240, 252));
+}
+
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-image: linear-gradient(to left, rgb(73, 145, 253), rgb(8, 73, 172), rgb(200, 19, 236), rgb(107, 4, 128));
+    box-shadow: 2px 3px 10px 4px rgba(66, 1, 104, 0.411);
+}
+
+.logo img{
+    width: 125px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+img:hover{
+    transform: scale(1.2);
+    transform: rotate(360deg);
+}
+
+fieldset{
+    width: 450px;
+    padding: 20px 25px;
+    background-image: linear-gradient(to right, rgb(73, 145, 253), rgb(200, 19, 236));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.932);
+    border-right: 1px solid rgba(255, 255, 255, 0.932);
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px 4px rgba(66, 1, 104, 0.411);
+    margin-top: 100px;
+}
+
+legend{
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    padding: 2px 10px;
+    background-color: rgba(111, 8, 131, 0.774);
+    border-radius: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10px;
+    border-top: 1px solid white;
+}
+
+label{
+    font-weight: 500;
+    background-color: rgba(111, 8, 131, 0.74);
+    border-radius: 5px;
+    padding: 3px 5px;
+    border: none;
+}
+
+input {
+    width: 100%;
+    border: none;
+    padding: 3px 5px;
+    border-radius: 3px;
+    color: black;
+}
+
+select, option{
+    width: 50%;
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    color: black;
+}
+
+.btnM {
+    width: 100%;
+    padding: 7px;
+    font-weight: 500;
+    border: 1px solid rgb(149, 188, 240);
+    border-radius: 3px;
+    background-image: linear-gradient(to right, rgba(53, 117, 236, 0.74), rgba(0, 68, 255, 0.74));
+    box-shadow: 2px 3px 10px 4px rgba(66, 1, 104, 0.411);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btnM:hover{
+    transform: scale(1.05);
+}
+.btnM:active{
+    transform: scale(0.9);
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.btn{
+    background-color: rgb(0, 150, 0);
+    width: 100%;
+    padding: 7px;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 3px 10px 4px rgba(66, 1, 104, 0.411);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#red{
+    background-color: rgb(158, 18, 18);
+    border: none;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+.btn:active{
+    transform: scale(0.9);
+}
+
+ul {
+    padding: 15px 25px;
+}
+
+li {
+    padding: 5px;
+}
+
+a:link{
+    text-decoration: none;
+    padding: 2px;
+    background-color: rgba(66, 1, 104, 0.788);
+    border-radius: 2px;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.h1{
+    color: rgb(66, 1, 104);
+}
+
+
