@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Google Sans", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(244, 234, 253), rgb(237, 215, 255));
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-image: linear-gradient(to right, rgb(103, 0, 172), rgb(79, 1, 168));
+    color: white;
+    box-shadow: 0px 0px 10px rgb(105, 105, 105);
+}
+
+header small{
+    color: rgb(175, 142, 236);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding-left: 25px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgb(105, 105, 105);
+    gap: 20px;
+}
+
+.p-sct{
+    padding: 20px;
+}
+
+.p-sct h2{
+    font-size: 28px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.p-sct nav a i{
+    margin-right: 10px;
+    border: 1px solid rgb(218, 199, 231);
+    padding: 5px 8px;
+    border-radius: 8px;
+    color: rgb(103, 0, 172);
+    transition: 0.4s;
+}
+
+.p-sct nav a i:hover{
+    background-color: rgb(103, 0, 172);
+    color: white;
+}
+
+.p-sct label, p{
+    color: rgb(158, 142, 189);
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.p-sct input{
+    padding: 7px;
+    width: 250px;
+    border: none;
+    background-color: rgb(229, 224, 241);
+    color: black;
+    border-radius: 5px;
+}
+
+.p-link a:link{
+    color: rgb(158, 142, 189);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.p-sct .btn{
+    padding: 10px;
+    width: 75%;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: rgb(79, 1, 168);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.p-sct .btn:hover{
+    box-shadow: 0px 0px 7px rgb(57, 6, 105);
+}
+
+.p-sct .btn:active{
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+main .p-sct form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+main section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.span{
+    background-image: linear-gradient(to right, rgb(103, 0, 172), rgb(79, 1, 168));
+    padding: 20px;
+    border-radius: 90px 30px 30px 90px;
+    color: white;
+}
+
+.span h2{
+    margin-top: 100px;
+}
+
+.span p{
+    color: rgb(225, 209, 255);
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.btn2{
+    padding: 10px 25px;
+    font-weight: 500;
+    border-radius: 10px;
+    border:  2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn2:hover{
+    box-shadow: 0px 0px 10px 1px rgb(189, 119, 255);
+}
+
+.btn2:active{
+    background-color: white;
+    color: rgb(79, 1, 168);
+    transform: scale(0.9);
+}
